@@ -32,7 +32,7 @@ export default function Page() {
           <p className='mb-8 text-2xl leading-normal'>Testing Kit</p>
         </div>
         
-        <div className='relative my-12 h-48 w-1024px py-6 sm:w-1024px md:mb-40'>
+        <div className='relative my-12 h-48 w-full py-6 sm:w-full md:mb-40'>
           <View orbit className='relative h-full  sm:h-48 sm:w-full'>
             <Suspense fallback={null}>
               <Dog scale={10} position={[0, -1.6, 0]} rotation={[0.0, -0.3, 0]} />
@@ -40,5 +40,7 @@ export default function Page() {
             </Suspense>
           </View>
         </div>
-       
-    
+      </div>
+    </>
+  )
+}
