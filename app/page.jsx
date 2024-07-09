@@ -25,21 +25,21 @@ const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mo
 export default function Page() {
   return (
     <>
-      <div className='mx-auto flex w-full flex-col flex-wrap items-center md:flex-row  lg:w-4/5'>
+      <div className='mx-auto flex w-full flex-col flex-wrap items-center md:flex-row lg:w-4/5'>
         {/* jumbo */}
         <div className='flex w-full flex-col items-start justify-center p-12 text-center md:w-2/5 md:text-left'>
           <p className='w-full uppercase'>Nextjs Webgl</p>
           <p className='mb-8 text-2xl leading-normal'>Testing Kit</p>
         </div>
-        
-        <div className='relative my-12 h-48 w-full py-6 sm:w-full md:mb-40'>
-          <View orbit className='relative h-full  sm:h-48 sm:w-full'>
-            <Suspense fallback={null}>
-              <Dog scale={10} position={[0, -1.6, 0]} rotation={[0.0, -0.3, 0]} />
-              <Common color={'transparent'} />
-            </Suspense>
-          </View>
-        </div>
+      </div>
+      
+      <div className='relative w-full h-screen'>
+        <View orbit className='absolute top-0 left-0 w-full h-full'>
+          <Suspense fallback={null}>
+            <Dog scale={10} position={[0, -1.6, 0]} rotation={[0.0, -0.3, 0]} />
+            <Common color={'transparent'} />
+          </Suspense>
+        </View>
       </div>
     </>
   )
